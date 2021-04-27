@@ -78,4 +78,4 @@ $ yarn start
 
 This project is licensed under the terms of the [MIT](https://github.com/jeferson-sb/tindev/blob/master/LICENSE) license
 
-`Made with ♥ by Jeferson © 2020`
+`Made with ♥ by Carlos Lima © 2021`
