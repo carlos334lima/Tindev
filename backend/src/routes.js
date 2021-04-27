@@ -2,10 +2,6 @@ const express = require("express");
 
 const routes = express.Router();
 
-routes.get("/", (request, response) => {
-  return response.json({ message: "olá" });
-});
-
 /* 
 
   QUERY PARAMS: Filtros e paginação; (Get)
@@ -14,15 +10,16 @@ routes.get("/", (request, response) => {
 
 */
 
-routes.post("/devs", (request, response) => {
+routes.get("/", (request, response) => {
+  return response.json({ message: "olá" });
+});
 
+routes.post("/devs", (request, response) => {
   const { name, email } = request.body;
 
-  console.log(request.body)
+  console.log(request.body);
 
   return response.json({ message: `nome: ${name}` });
-
-
 });
 
 module.exports = routes;
