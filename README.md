@@ -39,17 +39,17 @@ Tindev as the name suggests it is a Tinder-like for Developers, a fullstack web 
 ### Installation
 
 ```bash
-$ cd tindev-backend
+$ cd backend
 $ yarn
 ```
 
 ```bash
-$ cd .. && cd tindev-frontend
+$ cd .. && cd web
 $ yarn
 ```
 
 ```bash
-$ cd .. && cd tindev-mobile
+$ cd .. && mobile
 $ yarn
 ```
 
