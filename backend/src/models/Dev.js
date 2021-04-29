@@ -1,3 +1,5 @@
+//Abstração da tabela do banco de dados
+
 const { Schema, model } = require("mongoose");
 
 const DevSchema = new Schema(
@@ -16,9 +18,22 @@ const DevSchema = new Schema(
       type: String,
       required: true,
     },
+    likes: [
+      {
+                                    //Relacionando Likes
+        type: Schema.Types.ObjectId, //Referencia o ID do mongo
+        ref: "Dev",
+      },
+    ],
+    dislikes: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Dev",
+      },
+    ],
   },
   {
-    timestamps: true, //criar uma coluna automaticamente => createdAt, updatedAt
+    timestamps: true, //criar uma coluna automaticamente => data =>  createdAt, updatedAt
   }
 );
 
