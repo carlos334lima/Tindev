@@ -18,23 +18,18 @@ const DevSchema = new Schema(
       type: String,
       required: true,
     },
-    likes: [
-      {
-                                    //Relacionando Likes
+    likes: [{
+        //Relacionando Likes
         type: Schema.Types.ObjectId, //Referencia o ID do mongo
         ref: "Dev",
-      },
-    ],
-    dislikes: [
-      {
+      }],
+    dislikes: [{
         type: Schema.Types.ObjectId,
         ref: "Dev",
-      },
-    ],
+      }],
   },
   {
     timestamps: true, //criar uma coluna automaticamente => data =>  createdAt, updatedAt
-  }
-);
+  });
 
 module.exports = model("Dev", DevSchema);
